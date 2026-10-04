@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "Paseo Aranjuez",
+    "slug": "paseo-aranjuez",
+    "version": "1.0.0",
+    "scheme": "paseoaranjuez",
+    "orientation": "default",
+    "userInterfaceStyle": "light",
+    "android": {
+      "package": "com.softcraft.paseoaranjuez",
+      "versionCode": 1,
+      "permissions": [
+        "CAMERA"
+      ],
+      "blockedPermissions": [
+        "android.permission.RECORD_AUDIO"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/brand/app-icon.png",
+        "backgroundColor": "#00182B"
+      }
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-font",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Permite usar la cámara para escanear tus códigos de Paseo.",
+          "recordAudioAndroid": false
+        }
+      ],
+      "./plugins/withIosPaths"
+    ],
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "icon": "./assets/brand/app-icon.png",
+    "ios": {
+      "bundleIdentifier": "com.softcraft.paseoaranjuez",
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSLocalNetworkUsageDescription": "Conectarnos al servidor de Paseo en tu red durante las pruebas.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    }
+  }
+}

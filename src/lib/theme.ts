@@ -1,0 +1,15 @@
+export const C = {
+  navy: "#00182B",
+  deep: "#061223",
+  card: "#132B43",
+  blue: "#18476A",
+  gold: "#D9B66F",
+  ivory: "#F7F3EA",
+  ink: "#102A40",
+  muted: "#526577",
+  line: "#DBE2E7",
+  white: "#FFFFFF",
+  lightText: "#BFCBD9",
+  error: "#AE343A",
+  success: "#2C7251",
+};
