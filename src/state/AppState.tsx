@@ -41,8 +41,11 @@ export function Providers({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const unsub = onSession((next) => {
       if (next?.user.id !== account.current) {
-        client.clear();
         if (account.current) {
+          const previousUserId = account.current;
+          client.removeQueries({
+            predicate: (query) => query.queryKey.includes(previousUserId),
+          });
           setCart([]);
           setUncertain(false);
         }
